@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/riwayat', 'OrderController@index')->name('order.riwayat');
+Route::get('/kasir', 'OrderController@cashier')->name('order.kasir');
+Route::get('/pesanan', 'OrderController@onlineOrder')->name('order.onlineOrder');
