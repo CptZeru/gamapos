@@ -17,4 +17,8 @@ class OrderController extends Controller
     public function onlineOrder(){
         return view('orders.onlineOrder');
     }
+
+    public function detailOrder(){
+        return view('orders.detailPesanan');
+    }
 }

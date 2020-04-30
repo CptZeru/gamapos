@@ -21,20 +21,28 @@
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
+        <!-- <div class="row">
+          <div class="col ml-4">
+            <p><img src="https://www.jaipuriaschoolsbanaras.in/parao/wp-content/uploads/2016/11/blank-img.jpg" style="width: 20px; height: 20px; border-radius: 50%;"> Saldo</p>
+          </div>
+          <div class="col">
+            <p class="float-right mr-3">Rp. 10.000</p>
+          </div>
+        </div> -->
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{ route('order.onlineOrder') }}" class="nav-link">
-              <i class="nav-icon fas fa-receipt"></i>
+            <a href="/" class="nav-link">
+              <i class="nav-icon fas fa-chart-bar"></i>
               <p>
-                Pesanan Online
+                Dashboard
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="{{ route('order.kasir') }}" class="nav-link">
-              <i class="nav-icon fas fa-shopping-cart"></i>
+              <i class="nav-icon fas fa-calculator"></i>
               <p>
                 Kasir
               </p>
@@ -42,7 +50,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('order.riwayat') }}" class="nav-link">
-              <i class="nav-icon fas fa-history"></i>
+              <i class="nav-icon fas fa-receipt"></i>
               <p>
                 Riwayat Transaksi
               </p>
@@ -69,10 +77,34 @@
             </ul> -->
           </li>
           <li class="nav-item">
-            <a href="{{ route('order.kasir') }}" class="nav-link">
-              <i class="nav-icon fas fa-file-signature"></i>
+            <a href="/store" class="nav-link">
+              <i class="nav-icon fas fa-store"></i>
               <p>
-                Laporan
+                Buka Toko
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-cubes"></i>
+              <p>
+                Kelola Stok
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('order.onlineOrder') }}" class="nav-link">
+              <i class="nav-icon fas fa-shopping-bag"></i>
+              <p>
+                Pesanan Online
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-cog"></i>
+              <p>
+                Pengaturan
               </p>
             </a>
           </li>
