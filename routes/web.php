@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('/store', function () {
     return view('openStores');
 });
+Route::get('/items', function () {
+    return view('items');
+});
 
 Route::get('/riwayat', 'OrderController@index')->name('order.riwayat');
 Route::get('/kasir', 'OrderController@cashier')->name('order.kasir');

@@ -198,7 +198,7 @@
                 @component('components.card')
                     <div class="row">
                         <div class="col-12">
-                            <input class="w-100 " type="text" id="riwayatSearch" placeholder="Cari Riwayat Transaksi">
+                            <input class="w-100 form-control" type="text" id="riwayatSearch" placeholder="Cari Riwayat Transaksi">
                         </div>
                     </div>
                     <br>
