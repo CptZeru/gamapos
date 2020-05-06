@@ -22,6 +22,12 @@ Route::get('/store', function () {
 Route::get('/items', function () {
     return view('items');
 });
+Route::get('/pengaturan', function () {
+    return view('settings');
+});
+Route::get('/daftarpesanan', function () {
+    return view('orders.daftarPesanan');
+});
 
 Route::get('/riwayat', 'OrderController@index')->name('order.riwayat');
 Route::get('/kasir', 'OrderController@cashier')->name('order.kasir');

@@ -8,7 +8,7 @@
 
 @section('content')
     <div class="container-fluid">
-        <div class="row">
+        <div class="row ml-4 mr-4">
             <div class="col-auto">
                 @component('components.card')
                     <p class="m-0 p-0 text-center"> 12 Mar 2020 </p>
@@ -21,7 +21,7 @@
                 @endcomponent
             </div>
         </div>
-        <div class="row">
+        <div class="row ml-4 mr-4">
             <div class="col">
                 <div class="small-box bg-white">
                     <div class="inner">
@@ -65,7 +65,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row ml-4 mr-4">
             <div class="col">
                 <!-- BAR CHART -->
                 <div class="card card-success">

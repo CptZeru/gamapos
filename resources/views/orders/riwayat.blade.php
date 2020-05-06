@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="{{ asset('lte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
 @endsection
 
-<!-- @section('judulkonten')
-    <h1 class="m-0 text-dark">Riwayat Transaksi</h1>
-@endsection -->
+@section('judulkonten')
+    <!-- <h1 class="m-0 text-dark">Riwayat Transaksi</h1> -->
+@endsection
 
 @section('breadcrumbs')
-    <li class="breadcrumb-item active">Riwayat Transaksi</li>
+    <!-- <li class="breadcrumb-item active">Riwayat Transaksi</li> -->
 @endsection
 
 @section('content')
     <div class="container-fluid">
-        <div class="row">
+        <div class="row ml-4 mr-4">
             <div class="col-4">
                 @component('components.card')
                     <div class="row">
@@ -135,7 +135,7 @@
                             <h6 class=""> Pilih </h6>
                         </div>
                         <div class="col">
-                            <h6 class="font-weight-bold">13Feb-13Mar 2020 ></h6>
+                            <h6 class="font-weight-bold">13Fe-13Mar 2020 ></h6>
                         </div>
                     </div>
                     <br>
@@ -194,7 +194,7 @@
                     </div>
                 @endcomponent
             </div>
-            <div class="col-8">
+            <div class="col-8 pl-4">
                 @component('components.card')
                     <div class="row">
                         <div class="col-12">

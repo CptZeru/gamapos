@@ -5,93 +5,80 @@
 @endsection
 
 @section('judulkonten')
-    <h1 class="m-0 text-dark">Pesanan Online</h1>
+    <!-- <h1 class="m-0 text-dark">Pesanan Online</h1> -->
 @endsection
 
 @section('breadcrumbs')
-    <li class="breadcrumb-item active">Pesanan Online</li>
+    <!-- <li class="breadcrumb-item active">Pesanan Online</li> -->
 @endsection
 
 @section('content')
     <div class="container-fluid">
-        <div class="row">
+        <div class="row ml-4 mr-4">
             <div class="col-12">
-                <div class="card">
-                    <div class="card-header border-transparent">
-                        <h3 class="card-title">Pesanan Terkini</h3>
-
-                        <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                            <i class="fas fa-minus"></i>
-                        </button>
+            @component('components.card')
+                    <div class="row">
+                        <div class="col-auto align-content-center">
+                            <h3 class="font-weight-bold">Pilih Toko</h3>
+                        </div>
+                        <div class="col">
+                            <input class="w-100 form-control" type="text" id="tokoSearch" placeholder="Cari Toko">
                         </div>
                     </div>
-                    <!-- /.card-header -->
-                    <div class="card-body p-0">
-                        <div class="table-responsive">
-                            <table class="table m-0">
-                                <thead>
-                                    <tr>
-                                        <th>No. Pemesanan</th>
-                                        <th>Nama Pemesan</th>
-                                        <th>Status</th>
-                                        <th>Pesanan</th>
-                                        <th>Total Bayar</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                                        <td>Call of Duty IV</td>
-                                        <td><span class="badge badge-success">Shipped</span></td>
-                                        <td>
-                                            <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
-                                        </td>
-                                        <td>Rp. 123.123</td>
-                                        <td>
-                                            <button class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></button>
-                                            <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                                        <td>Samsung Smart TV</td>
-                                        <td><span class="badge badge-warning">Pending</span></td>
-                                        <td>
-                                            <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
-                                        </td>
-                                        <td>Rp. 123.123</td>
-                                        <td>
-                                            <button class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></button>
-                                            <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                                        <td>iPhone 6 Plus</td>
-                                        <td><span class="badge badge-danger">Delivered</span></td>
-                                        <td>
-                                            <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
-                                        </td>
-                                        <td>Rp. 123.123</td>
-                                        <td>
-                                            <button class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></button>
-                                            <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- /.table-responsive -->
+                    <br>
+                    <div class="row">
+                        <div class="col-6">
+                        <a href="/daftarpesanan">
+                        @component('components.card')
+                                    <div class="row">
+                                        <div class="col-4 m-0">
+                                            <img src="https://www.jaipuriaschoolsbanaras.in/parao/wp-content/uploads/2016/11/blank-img.jpg" style="width: 100%; height: 100%;">
+                                        </div>
+                                        <div class="col mr-0">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <h5 class="nomorPesanan font-weight-bold text-success">3 Pesanan Online</h5>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="mb-0"> Kantin Sekolah Vokasi UGM <br> Gedung SEKIP 1, UGM, Yogyakarta </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endcomponent
+                                </a>
+                            </div>
+                            <div class="col-6">
+                            <a href="/daftarpesanan">
+                            @component('components.card')
+                                    <div class="row">
+                                        <div class="col-4 m-0">
+                                            <img src="https://www.jaipuriaschoolsbanaras.in/parao/wp-content/uploads/2016/11/blank-img.jpg" style="width: 100%; height: 100%;">
+                                        </div>
+                                        <div class="col mr-0">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <h5 class="nomorPesanan font-weight-bold text-success">2 Pesanan Online</h5>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="mb-0"> Kantin Sekolah Vokasi UGM <br> Gedung SEKIP 1, UGM, Yogyakarta </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endcomponent
+                                </a>
+                            </div>
                     </div>
-                    <!-- /.card-body -->
-                    <div class="card-footer clearfix">
-                        <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">Lihat Semua Pesanan</a>
-                    </div>
-                    <!-- /.card-footer -->
-                </div>
-                <!-- /.card -->
+                @endcomponent
             </div>
         </div>
     </div>

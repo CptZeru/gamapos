@@ -7,7 +7,7 @@
 
 @section('content')
     <div class="container-fluid">
-        <div class="row">
+        <div class="row ml-4 mr-4">
             <div class="col-12">
             @component('components.card')
                     <div class="row">
@@ -19,7 +19,6 @@
                     <br>
                     <div class="row">
                         <div class="col-6">
-                                <a href="#" class="text-reset">
                                 @component('components.card')
                                     <div class="row">                                    
                                         <div class="col ml-3 mr-0">
@@ -46,10 +45,8 @@
                                         </div>
                                     </div>
                                 @endcomponent
-                                </a>
                             </div>
                             <div class="col-6">
-                                <a href="#" class="text-reset">
                                 @component('components.card')
                                     <div class="row">                                    
                                         <div class="col ml-3 mr-0">
@@ -76,7 +73,6 @@
                                         </div>
                                     </div>
                                 @endcomponent
-                                </a>
                             </div>
                     </div>
                 @endcomponent
