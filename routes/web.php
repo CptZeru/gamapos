@@ -16,6 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('dashboard');
 });
+Route::get('/login', function () {
+    return view('auth.login');
+});
+Route::get('/daftar', function () {
+    return view('auth.register');
+});
+Route::get('/daftarUsaha', function () {
+    return view('auth.registProfilUsaha');
+});
 Route::get('/store', function () {
     return view('openStores');
 });
