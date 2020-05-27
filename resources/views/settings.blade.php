@@ -86,8 +86,8 @@
                         </div>
                     </div>
                     <div class="row mt-2">
-                        <div class="col-12">
-                            <p class="font-weight-bold text-danger">Keluar</p>
+                        <div class="col-12"><a href="/login">
+                            <p class="font-weight-bold text-danger">Keluar</p></a>
                         </div>
                     </div>
                 @endcomponent

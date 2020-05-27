@@ -30,7 +30,10 @@
                 <div class="row m-0">
                     <div class="col-sm-6">
                         <div class="row ml-5">
-                            <div class="col-sm-12">
+                            <div class="col-sm-4">
+                                <img src="https://www.jaipuriaschoolsbanaras.in/parao/wp-content/uploads/2016/11/blank-img.jpg" style="width: 100%; height: 100%;">
+                            </div>
+                            <div class="col-sm-8">
                                 <p class="text-success font-weight-bold mb-0">Sederhana dan Cepat</p>
                                 <p class="mt-0">Lakukan transaksi dengan cepat, <br/>
                                 jangan biarkan pelanggan anda <br/>
@@ -41,7 +44,10 @@
                         <br/>
                         <br/>
                         <div class="row ml-5">
-                            <div class="col-sm-12">
+                            <div class="col-sm-4">
+                                <img src="https://www.jaipuriaschoolsbanaras.in/parao/wp-content/uploads/2016/11/blank-img.jpg" style="width: 100%; height: 100%;">
+                            </div>
+                            <div class="col-sm-8">
                                 <p class="text-success font-weight-bold mb-0">Dapat Menerima Pesanan Online</p>
                                 <p class="mt-0">Terima pesanan online dengan <br/>
                                 mudah dan cepat.</p>
@@ -51,7 +57,10 @@
                         <br/>
                         <br/>
                         <div class="row ml-5">
-                            <div class="col-sm-12">
+                            <div class="col-sm-4">
+                                <img src="https://www.jaipuriaschoolsbanaras.in/parao/wp-content/uploads/2016/11/blank-img.jpg" style="width: 100%; height: 100%;">
+                            </div>
+                            <div class="col-sm-8">
                                 <p class="text-success font-weight-bold mb-0">Rekap Laporan Terlengkap</p>
                                 <p class="mt-0">Dapatkan laporan lengkap <br/>
                                 tentang performa usaha anda.</p>
