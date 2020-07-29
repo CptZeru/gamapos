@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    <title>K-POS</title>
+    <title>K-POS | Dashboard</title>
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 @endsection
@@ -27,7 +27,7 @@
                     <div class="inner">
                         <p class="font-weight-bold">Total Pendapatan</p>
 
-                        <h3 class="text-success">70%<sup style="font-size: 20px">%</sup> <i class="fa fa-arrow-up"></i></h3>
+                        <h3 class="text-success">70%<sup style="font-size: 20px"></sup> <i class="fa fa-arrow-up"></i></h3>
                         
                     </div>
                     <div class="icon">
@@ -41,7 +41,7 @@
                     <div class="inner">
                         <p class="font-weight-bold">Total Keuntungan</p>
 
-                        <h3 class="text-success">30%<sup style="font-size: 20px">%</sup> <i class="fa fa-arrow-up"></i></h3>
+                        <h3 class="text-success">30%<sup style="font-size: 20px"></sup> <i class="fa fa-arrow-up"></i></h3>
                         
                     </div>
                     <div class="icon">
@@ -55,7 +55,7 @@
                     <div class="inner">
                         <p class="font-weight-bold">Total Penjualan</p>
 
-                        <h3 class="text-success">60%<sup style="font-size: 20px">%</sup> <i class="fa fa-arrow-up"></i></h3>
+                        <h3 class="text-success">60%<sup style="font-size: 20px"></sup> <i class="fa fa-arrow-up"></i></h3>
                         
                     </div>
                     <div class="icon">

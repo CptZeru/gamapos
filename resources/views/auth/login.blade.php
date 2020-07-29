@@ -3,10 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Log in</title>
+  <title>K-POS | Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <style>
+    .text-teal{
+      color: #11CFC5 !important;
+    }
+    .btn-success,
+    .btn-success:active,
+    .btn-success:visited,
+    .btn-success:focus
+    {
+      background-color: #11CFC5 !important;
+      border-color: #11CFC5 !important;
+    }
+    .btn-success:hover{
+        background-color: #0faba3 !important;
+        border-color: #0faba3 !important;
+    }
+  </style>
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ asset('lte/plugins/fontawesome-free/css/all.min.css') }}">
   <!-- Theme style -->
@@ -24,44 +40,45 @@
             <section class="content">
                 <div class="row m-0 mb-5">
                     <div class="col-sm-12 p-0">
-                        <h1 class="text-center">K-Jur Penjual</h1>
+                    <h1 class="text-center"><img src="{{ asset('/images/Intersection 4.png')}}" style="width: 3%; height: 3%;"></h1>
+                        <h1 class="text-center text-bold text-teal">K-Jur Penjual</h1>
                     </div>
                 </div>
                 <div class="row m-0">
                     <div class="col-sm-6">
                         <div class="row ml-5">
                             <div class="col-sm-4">
-                                <img src="https://www.jaipuriaschoolsbanaras.in/parao/wp-content/uploads/2016/11/blank-img.jpg" style="width: 100%; height: 100%;">
+                                <img src="{{ asset('/images/thunder.png')}}" style="width: 60%; height: 60%;">
                             </div>
                             <div class="col-sm-8">
-                                <p class="text-success font-weight-bold mb-0">Sederhana dan Cepat</p>
+                                <p class="text-teal font-weight-bold mb-0">Sederhana dan Cepat</p>
                                 <p class="mt-0">Lakukan transaksi dengan cepat, <br/>
                                 jangan biarkan pelanggan anda <br/>
                                 menunggu lama dan bosan.</p>
                             </div>
                         </div>
-                        <br/>
-                        <br/>
-                        <br/>
+                        
+                        
+                        
                         <div class="row ml-5">
                             <div class="col-sm-4">
-                                <img src="https://www.jaipuriaschoolsbanaras.in/parao/wp-content/uploads/2016/11/blank-img.jpg" style="width: 100%; height: 100%;">
+                                <img src="{{ asset('/images/Group-699.png')}}" style="width: 60%; height: 60%;">
                             </div>
                             <div class="col-sm-8">
-                                <p class="text-success font-weight-bold mb-0">Dapat Menerima Pesanan Online</p>
+                                <p class="text-teal font-weight-bold mb-0">Dapat Menerima Pesanan Online</p>
                                 <p class="mt-0">Terima pesanan online dengan <br/>
                                 mudah dan cepat.</p>
                             </div>
                         </div>
                         <br/>
-                        <br/>
-                        <br/>
+                        
+                        
                         <div class="row ml-5">
                             <div class="col-sm-4">
-                                <img src="https://www.jaipuriaschoolsbanaras.in/parao/wp-content/uploads/2016/11/blank-img.jpg" style="width: 100%; height: 100%;">
+                                <img src="{{ asset('/images/calculator.png')}}" style="width: 60%; height: 60%;">
                             </div>
                             <div class="col-sm-8">
-                                <p class="text-success font-weight-bold mb-0">Rekap Laporan Terlengkap</p>
+                                <p class="text-teal font-weight-bold mb-0">Rekap Laporan Terlengkap</p>
                                 <p class="mt-0">Dapatkan laporan lengkap <br/>
                                 tentang performa usaha anda.</p>
                             </div>
@@ -75,19 +92,29 @@
                             </div>
                         </div>
                         <br/>
-                        <form method="POST">
+                        <form method="POST" action="{{ route('loginPost') }}">
+                            @csrf
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                             <label for="email" class="text-secondary mb-0">Email</label><br>
                             <div class="input-group mb-3">
-                                <input type="email" class="form-control" placeholder="Email">
+                                <input name="email" type="email" class="form-control" placeholder="Email">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
                                     <span class="fas fa-envelope"></span>
                                     </div>
                                 </div>
                                 </div>
-                                <label for="email" class="text-secondary mb-0">Kata Sandi</label><br>
+                                <label for="password" class="text-secondary mb-0">Kata Sandi</label><br>
                                 <div class="input-group mb-3">
-                                <input type="password" class="form-control" placeholder="Password">
+                                <input name="password" type="password" class="form-control" placeholder="Password">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
                                     <span class="fas fa-lock"></span>
@@ -96,7 +123,7 @@
                             </div>
                             <br/>
                             <div class="col-sm-12 p-0">
-                                <button type="submit" class="btn btn-success btn-block">MASUK</button>
+                                <button type="submit" class="btn btn-success custom-btn btn-block">MASUK</button>
                             </div>
                         </form>
                         <br/>
@@ -105,7 +132,7 @@
                         </p>
                         <hr style="max-width:100px;border-top-width:5px;border-radius:5px;"/>
                         <p class="text-center mt-4 mb-0">
-                            Belum punya akun ?<a href="/daftar" class="text-success"> DAFTAR</a>
+                            Belum punya akun ?<a href="/daftar" class="text-teal"> DAFTAR</a>
                         </p>
                         @endcomponent
                     </div>

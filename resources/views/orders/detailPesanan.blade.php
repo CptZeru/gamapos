@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    <title>Detil Transaksi</title>
+    <title>K-POS | Detil Transaksi</title>
 @endsection
 
 @section('content')

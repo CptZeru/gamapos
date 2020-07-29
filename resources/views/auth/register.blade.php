@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Log in</title>
+  <title>K-POS | Register</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,7 +24,7 @@
             <section class="content">
                 <div class="row m-0 mb-5">
                     <div class="col-sm-12 p-0">
-                        <h1 class="text-center">K-Jur Penjual</h1>
+                        <h1 class="text-center text-bold text-teal">K-Jur Penjual</h1>
                     </div>
                 </div>
                 <div class="row m-0">
@@ -34,7 +34,7 @@
                                 <img src="https://www.jaipuriaschoolsbanaras.in/parao/wp-content/uploads/2016/11/blank-img.jpg" style="width: 100%; height: 100%;">
                             </div>
                             <div class="col-sm-8">
-                                <p class="text-success font-weight-bold mb-0">Sederhana dan Cepat</p>
+                                <p class="text-teal font-weight-bold mb-0">Sederhana dan Cepat</p>
                                 <p class="mt-0">Lakukan transaksi dengan cepat, <br/>
                                 jangan biarkan pelanggan anda <br/>
                                 menunggu lama dan bosan.</p>
@@ -48,7 +48,7 @@
                                 <img src="https://www.jaipuriaschoolsbanaras.in/parao/wp-content/uploads/2016/11/blank-img.jpg" style="width: 100%; height: 100%;">
                             </div>
                             <div class="col-sm-8">
-                                <p class="text-success font-weight-bold mb-0">Dapat Menerima Pesanan Online</p>
+                                <p class="text-teal font-weight-bold mb-0">Dapat Menerima Pesanan Online</p>
                                 <p class="mt-0">Terima pesanan online dengan <br/>
                                 mudah dan cepat.</p>
                             </div>
@@ -61,7 +61,7 @@
                                 <img src="https://www.jaipuriaschoolsbanaras.in/parao/wp-content/uploads/2016/11/blank-img.jpg" style="width: 100%; height: 100%;">
                             </div>
                             <div class="col-sm-8">
-                                <p class="text-success font-weight-bold mb-0">Rekap Laporan Terlengkap</p>
+                                <p class="text-teal font-weight-bold mb-0">Rekap Laporan Terlengkap</p>
                                 <p class="mt-0">Dapatkan laporan lengkap <br/>
                                 tentang performa usaha anda.</p>
                             </div>
@@ -107,7 +107,7 @@
                         </form>
                         <br/>
                         <p class="text-center mt-4 mb-0">
-                            Sudah punya akun ?<a href="/login" class="text-success"> MASUK </a>
+                            Sudah punya akun ?<a href="/login" class="text-teal"> MASUK </a>
                         </p>
                         @endcomponent
                     </div>

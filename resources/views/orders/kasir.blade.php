@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    <title>Kasir</title>
+    <title>K-POS | Kasir</title>
 @endsection
 
 @section('judulkonten')

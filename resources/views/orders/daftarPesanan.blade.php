@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    <title>Daftar Pesanan Online</title>
+    <title>K-POS | Daftar Pesanan Online</title>
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 @endsection
 

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    <title>Riwayat Transaksi</title>
+    <title>K-POS | Riwayat Transaksi</title>
 
     <link rel="stylesheet" href="{{ asset('lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('lte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    <title>Pesanan Online</title>
+    <title>K-POS | Pesanan Online</title>
 @endsection
 
 @section('judulkonten')
@@ -27,12 +27,13 @@
                     </div>
                     <br>
                     <div class="row">
-                        <div class="col-6">
+                    @foreach($locations as $lokasi)
+                    <div class="col-6 search-cards">
                         <a href="/daftarpesanan">
                         @component('components.card')
                                     <div class="row">
                                         <div class="col-4 m-0">
-                                            <img src="https://www.jaipuriaschoolsbanaras.in/parao/wp-content/uploads/2016/11/blank-img.jpg" style="width: 100%; height: 100%;">
+                                            <img src="{{$lokasi['foto']}}" style="width: 100%; height: 100%;">
                                         </div>
                                         <div class="col mr-0">
                                             <div class="row">
@@ -44,7 +45,7 @@
                                             <br>
                                             <div class="row">
                                                 <div class="col">
-                                                    <p class="mb-0"> Kantin Sekolah Vokasi UGM <br> Gedung SEKIP 1, UGM, Yogyakarta </p>
+                                                    <p class="mb-0"> {{$lokasi['nama']}} <br> {{$lokasi['deskripsi']}} </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -52,34 +53,23 @@
                                 @endcomponent
                                 </a>
                             </div>
-                            <div class="col-6">
-                            <a href="/daftarpesanan">
-                            @component('components.card')
-                                    <div class="row">
-                                        <div class="col-4 m-0">
-                                            <img src="https://www.jaipuriaschoolsbanaras.in/parao/wp-content/uploads/2016/11/blank-img.jpg" style="width: 100%; height: 100%;">
-                                        </div>
-                                        <div class="col mr-0">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <h5 class="nomorPesanan font-weight-bold text-success">2 Pesanan Online</h5>
-                                                </div>
-                                            </div>
-                                            <br>
-                                            <br>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <p class="mb-0"> Kantin Sekolah Vokasi UGM <br> Gedung SEKIP 1, UGM, Yogyakarta </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endcomponent
-                                </a>
-                            </div>
+                    @endforeach
                     </div>
                 @endcomponent
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        $(document).ready(function() {
+            $("#tokoSearch").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                    $(".search-cards").filter(function() {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+    </script>
 @endsection

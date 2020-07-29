@@ -13,27 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-});
-Route::get('/login', function () {
-    return view('auth.login');
-});
+Route::get('/', 'DashboardController@index')->name('dashboard');
+Route::get('/login', 'UserController@LoginIndex')->name('login');
+Route::post('/login', 'UserController@LoginPost')->name('loginPost');
+Route::get('/logout', 'UserController@logout')->name('logout');
 Route::get('/daftar', function () {
     return view('auth.register');
 });
 Route::get('/daftarUsaha', function () {
     return view('auth.registProfilUsaha');
 });
-Route::get('/store', function () {
-    return view('openStores');
-});
-Route::get('/items', function () {
-    return view('items');
-});
-Route::get('/pengaturan', function () {
-    return view('settings');
-});
+Route::get('/store', 'UserController@ListToko')->name('bukaToko');
+Route::get('/items', 'ItemController@TokoKelolaProduk');
+Route::get('/stock/{id}', 'ItemController@KelolaStok')->name('kelolaStok');
+Route::get('/pengaturan', 'UserController@UserSettings');
 Route::get('/daftarpesanan', function () {
     return view('orders.daftarPesanan');
 });

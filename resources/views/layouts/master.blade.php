@@ -17,6 +17,63 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{ asset('lte/dist/css/adminlte.min.css') }}">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <style>
+    a.active{
+      background-color : rgba(0, 0, 0, 0.05) !important;
+    }
+    .text-teal{
+      color: #11CFC5 !important;
+    }
+    .btn-success,
+    .btn-success:active,
+    .btn-success:visited,
+    .btn-success:focus
+    {
+      background-color: #11CFC5 !important;
+      border-color: #11CFC5 !important;
+    }
+    .btn-success:hover{
+        background-color: #0faba3 !important;
+        border-color: #0faba3 !important;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+
+    input[type=number] {
+        -moz-appearance:textfield; /* Firefox */
+    }
+    input.stock-field{
+      width: 50px;
+    }
+    .btn-circle.btn-sm { 
+            width: 30px; 
+            height: 30px; 
+            padding: 6px 0px; 
+            border-radius: 15px; 
+            font-size: 8px; 
+            text-align: center; 
+        } 
+        .btn-circle.btn-md { 
+            width: 50px; 
+            height: 50px; 
+            padding: 7px 10px; 
+            border-radius: 25px; 
+            font-size: 10px; 
+            text-align: center; 
+        } 
+        .btn-circle.btn-xl { 
+            width: 70px; 
+            height: 70px; 
+            padding: 10px 16px; 
+            border-radius: 35px; 
+            font-size: 12px; 
+            text-align: center; 
+        }
+  </style>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -25,9 +82,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
+      </li> -->
       <!-- <li class="nav-item d-none d-sm-inline-block">
         <a href="index3.html" class="nav-link">Home</a>
       </li>
@@ -54,7 +111,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="fa fa-shopping-bag"></i>
+          <i class="fa fa-shopping-bag text-teal"></i>
           <span class="badge badge-danger navbar-badge">3</span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -111,12 +168,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
-          <p>John Doeng</p>
+          <p>{{Session::get('name')}}</p>
         </a>
         <div class="dropdown-menu dropdown-menu dropdown-menu-right">
-          <span class="dropdown-header">Kasir</span>
+          <span class="dropdown-header">{{Session::get('level')}}</span>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="{{ route('logout') }}" class="dropdown-item">
             <i class="fas fa-sign-out-alt"></i> Log Out
           </a>
       </li>
@@ -159,18 +216,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- </div> -->
     <!-- /.content -->
     </section>
-  <!-- /.content-wrapper -->
+    <!-- /.content-wrapper -->
 
-  <!-- Control Sidebar -->
+    <!-- Control Sidebar -->
   
-  <!-- /.control-sidebar -->
+    <!-- /.control-sidebar -->
 
   </div>
-  <!-- Footer -->
+    <!-- Footer -->
     @include('layouts.module.footer')
-  <!-- ./wrapper -->
+    <!-- ./wrapper -->
 
-  <!-- REQUIRED SCRIPTS -->
+    <!-- REQUIRED SCRIPTS -->
 
   <!-- jQuery -->
   <script src="{{ asset('lte/plugins/jquery/jquery.min.js') }}"></script>
@@ -179,5 +236,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- AdminLTE App -->
   <script src="{{ asset('lte/dist/js/adminlte.min.js') }}"></script>
   @yield('scripts')
+  
 </body>
 </html>

@@ -5,5 +5,5 @@
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-  </footer>
+    <strong>Copyright &copy; 2020 <a href="https://adminlte.io">K-JUR Technow</a>.</strong> All rights reserved.
+</footer>

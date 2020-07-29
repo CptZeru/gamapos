@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    <title>Pengaturan</title>
+    <title>K-POS | Pengaturan</title>
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 @endsection
 
@@ -21,22 +21,22 @@
                         <div class="col-6">
                             <div class="row">
                                 <div class="col-12">
-                                    <h3 class="font-weight-bold  mb-0">Lebah Ganteng</h3>
+                                    <h3 class="font-weight-bold  mb-0">{{$userDetail['name']}}</h3>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <p class="font-weight-bold text-secondary  mb-0">+6285692345623</p>
+                                    <p class="font-weight-bold text-secondary  mb-0">{{$userDetail['no_telepon']}}</p>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <p class="font-weight-bold text-secondary  mb-0">Foodnesia | Owner</p>
+                                    <p class="font-weight-bold text-secondary  mb-0">{{$userDetail['penjual']['toko']}} | {{$userDetail['level']}}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6">
-                            <img class="rounded-circle float-right" src="https://www.jaipuriaschoolsbanaras.in/parao/wp-content/uploads/2016/11/blank-img.jpg" style="max-width: 100px; max-height: 100px;">
+                            <img class="rounded-circle float-right" src="{{$userDetail['foto']}}" style="max-width: 100px; max-height: 100px;">
                         </div>
                     </div>
                 @endcomponent
@@ -86,7 +86,7 @@
                         </div>
                     </div>
                     <div class="row mt-2">
-                        <div class="col-12"><a href="/login">
+                        <div class="col-12"><a href="{{ route('logout') }}">
                             <p class="font-weight-bold text-danger">Keluar</p></a>
                         </div>
                     </div>
